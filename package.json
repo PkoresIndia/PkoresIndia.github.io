@@ -14,7 +14,9 @@
     "babelify": "^7.3.0",
     "browserify": "^14.3.0",
     "express": "^4.15.2",
+    "gulp": "^3.9.1",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-materialize": "^0.18.1"
   }
 }
