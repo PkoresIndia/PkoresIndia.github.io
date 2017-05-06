@@ -7,7 +7,11 @@ nav {
 .slides {
     height:100% !important;
 }
-.collapsible-header {
-  background-color:#0097a7!important;
+.collapsible-header{
+  background-color:#0d47a1!important;
+  color:white!important;
+}
+.collection-header h4,.collection-header {
+  background-color:#0d47a1!important;
   color:white!important;
 }
