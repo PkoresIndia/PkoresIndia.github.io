@@ -7,7 +7,7 @@ export default class Carousel extends Component {
     }
     componentDidMount() {
         this.state.carousels.forEach((carousel,index)=>{
-            this.colorifyImage(carousel,'#03A9F4',this.state.carousels,index)
+            this.colorifyImage(carousel,'#00BCD4',this.state.carousels,index)
         })
     }
     colorifyImage(carousel,color,carousels,index) {
@@ -20,7 +20,7 @@ export default class Carousel extends Component {
             const w = canvas.width,h = canvas.height
             context.drawImage(img,0,0,w,h)
             context.fillStyle = color
-            context.globalAlpha = 0.7
+            context.globalAlpha = 0.6
             context.fillRect(0,0,w,h)
             carousel.src = canvas.toDataURL()
             carousels[index] = carousel
