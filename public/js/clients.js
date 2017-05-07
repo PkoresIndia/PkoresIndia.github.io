@@ -3,9 +3,13 @@
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Navbar = require('./components/Navbar');
+var _CollectionComponent = require('./components/CollectionComponent');
 
-var _Navbar2 = _interopRequireDefault(_Navbar);
+var _CollectionComponent2 = _interopRequireDefault(_CollectionComponent);
+
+var _CollapsibleComponent = require('./components/CollapsibleComponent');
+
+var _CollapsibleComponent2 = _interopRequireDefault(_CollapsibleComponent);
 
 var _react = require('react');
 
@@ -15,13 +19,9 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _CollapsibleComponent = require('./components/CollapsibleComponent');
+var _Navbar = require('./components/Navbar');
 
-var _CollapsibleComponent2 = _interopRequireDefault(_CollapsibleComponent);
-
-var _CollectionComponent = require('./components/CollectionComponent');
-
-var _CollectionComponent2 = _interopRequireDefault(_CollectionComponent);
+var _Navbar2 = _interopRequireDefault(_Navbar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31,34 +31,35 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var AboutUsComponent = function (_Component) {
-    _inherits(AboutUsComponent, _Component);
+var ClientComponent = function (_Component) {
+    _inherits(ClientComponent, _Component);
 
-    function AboutUsComponent(props) {
-        _classCallCheck(this, AboutUsComponent);
+    function ClientComponent(props) {
+        _classCallCheck(this, ClientComponent);
 
-        return _possibleConstructorReturn(this, (AboutUsComponent.__proto__ || Object.getPrototypeOf(AboutUsComponent)).call(this, props));
+        return _possibleConstructorReturn(this, (ClientComponent.__proto__ || Object.getPrototypeOf(ClientComponent)).call(this, props));
     }
 
-    _createClass(AboutUsComponent, [{
+    _createClass(ClientComponent, [{
         key: 'render',
         value: function render() {
-            var paragraphs = ['PK Ores Pvt. Ltd.  was set up in the year 2002.  It is one of the leading iron ore suppliers in India. It deals with supplies of iron ore fines to leading exporter in India. In 2002, PK Ores Pvt. Ltd ventured into the field of mining of iron ore. Presently it is involved in mining of ferrous and non ferrous minerals like Iron Ore, Chrome, Manganese, Bauxite, Dolomite etc.', 'PK Ores Pvt. Ltd.  was set up in the year 2002.  It is one of the leading iron ore suppliers in India. It deals with supplies of iron ore fines to leading exporter in India. In 2002, PK Ores Pvt. Ltd ventured into the field of mining of iron ore. Presently it is involved in mining of ferrous and non ferrous minerals like Iron Ore, Chrome, Manganese, Bauxite, Dolomite etc.', 'Our core strengths are mining of Ferrous and Non Ferrous minerals. The company carries out Iron ore mining in the mineral rich state of Orissa and Jharkhand in the Eastern part of India. The company is also involved in deploying new technology to upgrade its mining facilities to maintain high quality and efficient processes. While pursuing excellence in the above areas, the company’s underlying philosophy has always been to give special care towards local people, environmental issues, child education, health programs and non-conventional energy within its mining area. The company has maintained its efficiency, workers and the environment and has sustained consistent quality in all its efforts.'];
-            var paragraphCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: paragraphs });
-            var collapsibles = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'About Us', text: paragraphCollection }] });
+            var clientListComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: ['Sps group of companies', 'Nova ispat', 'Api ispat', 'Monet ispat', 'Nobel group of companies', 'Welspun steel and power', 'Milan developers', 'Nkb Industries.'] });
+            var clientListCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Following is a partial list of our client Lists', text: clientListComponent }] });
+            var clientArray = ['Our Clients includes large and small companies both in manufacturing and service sector, providing clients the best value for money has made PK Ores Pvt. Ltd, one of the fastest growing and most respected firms in orissa as well as in Indian mining industry.', clientListCollapsible];
+            var clientCollectionComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: clientArray });
             return _react2.default.createElement(
                 'div',
                 null,
                 _react2.default.createElement(_Navbar2.default, null),
-                collapsibles
+                _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Our Clients', text: clientCollectionComponent }] })
             );
         }
     }]);
 
-    return AboutUsComponent;
+    return ClientComponent;
 }(_react.Component);
 
-_reactDom2.default.render(_react2.default.createElement(AboutUsComponent, null), document.getElementById('main'));
+_reactDom2.default.render(_react2.default.createElement(ClientComponent, null), document.getElementById('main'));
 
 },{"./components/CollapsibleComponent":2,"./components/CollectionComponent":3,"./components/Navbar":4,"react":230,"react-dom":35}],2:[function(require,module,exports){
 'use strict';
