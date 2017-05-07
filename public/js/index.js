@@ -233,7 +233,7 @@ var NavBar = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
 
-        _this.state = { navs: [{ text: "Home", url: "index.html" }, { text: "About Us", url: "aboutus.html" }, { text: "Contact Us", url: "contactus.html" }, { text: "Services", url: "services.html" }, { text: "Our Partners", url: "partners.html" }, { text: 'Our Clients', url: 'clients.html' }] };
+        _this.state = { navs: [{ text: "Home", url: "index.html" }, { text: "About Us", url: "aboutus.html" }, { text: "Contact Us", url: "contactus.html" }, { text: "Services", url: "services.html" }, { text: "Our Partners", url: "partners.html" }, { text: 'Our Clients', url: 'clients.html' }, { text: 'Gallery', url: 'gallery.html' }] };
         return _this;
     }
 
