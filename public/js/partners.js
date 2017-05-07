@@ -142,7 +142,7 @@ var NavBar = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
 
-        _this.state = { navs: [{ text: "Home", url: "index.html" }, { text: "About Us", url: "aboutus.html" }, { text: "Contact Us", url: "contactus.html" }, { text: "Services", url: "services.html" }] };
+        _this.state = { navs: [{ text: "Home", url: "index.html" }, { text: "About Us", url: "aboutus.html" }, { text: "Contact Us", url: "contactus.html" }, { text: "Services", url: "services.html" }, { text: "Our Partners", url: "partners.html" }] };
         return _this;
     }
 
@@ -25247,7 +25247,24 @@ var PartnersComponent = function (_Component) {
     _createClass(PartnersComponent, [{
         key: 'render',
         value: function render() {
-            var partnersArray = ['We are associated with lot of companies in form of exploration and technology used for mining.', 'For exploration of minerals, PK Ores Pvt. Ltd has tied up with the most leading organization like Geomin Group. With this venture we are exploring the mineral resources in the whole world. For the best technology used for mining, who else is better then Triveni earth movers (p) ltd. no one in India. We have tied of with them to encase the opportunity of best technology used for mining to have better production.'];
+            var partnersHtml = _react2.default.createElement(
+                'p',
+                null,
+                'For exploration of minerals, PK Ores Pvt. Ltd has tied up with the most leading organization like ',
+                _react2.default.createElement(
+                    'a',
+                    { href: 'http://www.geomin.com' },
+                    'Geomin Group'
+                ),
+                '. With this venture we are exploring the mineral resources in the whole world. For the best technology used for mining, who else is better then ',
+                _react2.default.createElement(
+                    'a',
+                    { href: 'http://thriveni.com/' },
+                    'Thriveni earth movers (p) ltd. '
+                ),
+                'no one in India. We have tied of with them to encase the opportunity of best technology used for mining to have better production.'
+            );
+            var partnersArray = ['We are associated with lot of companies in form of exploration and technology used for mining.', partnersHtml];
             var partnersCollectionComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: partnersArray });
             var collapsibleObject = [{ header: 'Our Partners', text: partnersCollectionComponent }];
             return _react2.default.createElement(
