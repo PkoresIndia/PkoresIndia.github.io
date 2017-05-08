@@ -5,6 +5,7 @@ import Carousel from './components/Carousel'
 import {Collapsible,CollapsibleItem,Collection,CollectionItem} from 'react-materialize'
 import CollapsibleComponent from './components/CollapsibleComponent'
 import CollectionComponent from './components/CollectionComponent'
+import MultiCollapsibles from './components/MultiCollapsibles'
 class IndexComponent extends Component {
     constructor(props) {
         super(props)
@@ -24,12 +25,18 @@ class IndexComponent extends Component {
         const newsObjs = ['We have already Started Our Overseas Expansion in West Africa','We are starting steward oring soon.']
         const newsComponent = <CollectionComponent className='white black-text' collections={newsObjs}/>
         const newsCollapsible = <CollapsibleComponent collapsibles = {[{header:'Company News',text:newsComponent}]}/>
+        const mininingDevelopmentArray = ['Geographical Prospecting','Mine Planning','Statutary clEARANCE','Infrastructure setup','Mining operation']
+        const miningCostArray = ['Equipment Procurement','Ore handling','OB removal','Socioeconomic development']
+        const miningProcessingArray = ['Marketing','Logistics','Exports']
+        const businessModelObject = {title:'Business Model',collapsibles:[{title:'Mining Development',items:mininingDevelopmentArray},{title:'Mining Cost',items:miningCostArray},{title:'Mining Processing',items:miningProcessingArray}]}
+        const businessModelComponent = <MultiCollapsibles item={businessModelObject}/>
         return (<div>
                 <NavBar/>
                 <Carousel carousels={carousels}/>
                 {companyOverviewCollapsible}
                 <CollapsibleComponent collapsibles={collapsibles}/>
                 {newsCollapsible}
+                {businessModelComponent}
             </div>)
     }
 }
