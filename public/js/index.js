@@ -308,7 +308,7 @@ var NavBar = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
 
-        _this.state = { navs: [{ text: "Home", url: "index.html" }, { text: "About Us", url: "aboutus.html" }, { text: "Contact Us", url: "contactus.html" }, { text: "Services", url: "services.html" }, { text: "Our Partners", url: "partners.html" }, { text: 'Our Clients', url: 'clients.html' }, { text: 'Gallery', url: 'gallery.html' }] };
+        _this.state = { navs: [{ text: "Home", url: "index.html" }, { text: "About Us", url: "aboutus.html" }, { text: "Our Business", url: "our-business.html" }, { text: "Our Partners", url: "partners.html" }, { text: 'Our Clients', url: 'clients.html' }, { text: 'Gallery', url: 'gallery.html' }, { text: "Contact Us", url: "contactus.html" }] };
         return _this;
     }
 
@@ -407,10 +407,10 @@ var IndexComponent = function (_Component) {
             var newsObjs = ['We have already Started Our Overseas Expansion in West Africa', 'We are starting steward oring soon.'];
             var newsComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: newsObjs });
             var newsCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Company News', text: newsComponent }] });
-            var mininingDevelopmentArray = ['Geographical Prospecting', 'Mine Planning', 'Statutary clEARANCE', 'Infrastructure setup', 'Mining operation'];
+            var mininingDevelopmentArray = ['Geographical Prospecting', 'Mine Planning', 'Statutary Clearance', 'Infrastructure setup', 'Mining operation'];
             var miningCostArray = ['Equipment Procurement', 'Ore handling', 'OB removal', 'Socioeconomic development'];
             var miningProcessingArray = ['Marketing', 'Logistics', 'Exports'];
-            var businessModelObject = { title: 'Business Model', collapsibles: [{ title: 'Mining Development', items: mininingDevelopmentArray }, { title: 'Mining Cost', items: miningCostArray }, { title: 'Mining Processing', items: miningProcessingArray }] };
+            var businessModelObject = { title: 'Business Model', collapsibles: [{ title: 'Mining Development', items: mininingDevelopmentArray }, { title: 'Mining Contracting', items: miningCostArray }, { title: 'Mining Processing', items: miningProcessingArray }] };
             var businessModelComponent = _react2.default.createElement(_MultiCollapsibles2.default, { item: businessModelObject });
             return _react2.default.createElement(
                 'div',
@@ -419,7 +419,6 @@ var IndexComponent = function (_Component) {
                 _react2.default.createElement(_Carousel2.default, { carousels: carousels }),
                 companyOverviewCollapsible,
                 _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: collapsibles }),
-                newsCollapsible,
                 businessModelComponent
             );
         }

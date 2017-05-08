@@ -25235,34 +25235,43 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ServicesComponent = function (_Component) {
-    _inherits(ServicesComponent, _Component);
+var OurBusinessComponent = function (_Component) {
+    _inherits(OurBusinessComponent, _Component);
 
-    function ServicesComponent(props) {
-        _classCallCheck(this, ServicesComponent);
+    function OurBusinessComponent(props) {
+        _classCallCheck(this, OurBusinessComponent);
 
-        return _possibleConstructorReturn(this, (ServicesComponent.__proto__ || Object.getPrototypeOf(ServicesComponent)).call(this, props));
+        return _possibleConstructorReturn(this, (OurBusinessComponent.__proto__ || Object.getPrototypeOf(OurBusinessComponent)).call(this, props));
     }
 
-    _createClass(ServicesComponent, [{
+    _createClass(OurBusinessComponent, [{
         key: 'render',
         value: function render() {
-            var logisticsComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: ['At PK Ores Pvt Ltd, it is well understood that in order to make a significant progress in any mineral industry, it is important to have control over the logistics involved in transport of bulk commodity like iron ores etc. It has in its control a fleet of trucks such as to be able to move about 100000 MT of ores each month. It has developed a very good relation with Indian Railways and dispatches around 50000 MT/ Month by rail to its various customers.', 'As a step in the direction of control over logistics, PK Ores has been able to secure a license from the government of India and is now developing its own captive Railway siding involving a cost of Rs, 12.00 Crores. The siding is situated at Bada Bandh, 7 kms from the Paradip Port.'] });
-            var miningComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: ['We are involved in mining of iron ores in the state of Orissa. From a modest beginning, today it has achieved a production level of 0.80 Million MT / Annum. The activity of mining includes exploration of mineral deposit, development of infrastructure for mining, over burden removal, production of ore in its raw form and processing of the ore produced in crushing and sizing units.', 'It is a measure of its success in mining that PK Ores Pvt Ltd with its associates today enjoys the monopoly right of production of ores from 2 large iron ore mines namely, : Joururi mines spread over an area of 170 hectres in Keonjhar district of Orissa and Udalbadi Iron Mines spread over 123 hectres in Sundergarh district of Orissa.', 'The mining operations are taken up with extensive use of modern machinery. PK Ores uses large earth moving machinery including, Excavators (0.9CuM to 2.5 CuM bucket sizes; of Komatsu and Caterpillar make), High Volume Mining Dumpers ( HM1025, VOLVO FM 9), Automatic Crushing Units (Terex Make), Deep Hole Drilling Equipment (ATLAS COPCO).'] });
-            var collapsibleObjects = [{ header: 'Mining', text: miningComponent }, { header: 'Trading', text: 'PK Ores Pvt. Ltd is actively involved in taking advantage in the spurt of demand for minerals worldwide. It is involved in dispatches in excess of 1.4 million MT/ Annum of iron ores. The trading activity includes supplying of ores to domestic Indian Steel producers as well as being involved in export of ores to China. The ability of PK Ores Pvt Ltd in trading of major minerals has led to a significant in crease in its turnover. It has now achieved an annualized turnover of Rs. 30 Crores (USD 25…..Million) from sales of ores.' }, { header: 'Logistics', text: logisticsComponent }, { header: 'Stevedoring', text: 'A significant achievement of PK Ores Pvt Ltd is reorganization by the government of India of its experience in logistics and thus issue it a license for stevedoring. This additional activity will ensure the PK Ores Pvt Ltd in all the activities involved in mining industry, i.e. from exploration, development, production, sales, dispatches and vessel loading.' }];
-            var collapsibles = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: collapsibleObjects });
+            var miningParagraphs = ['Exploration of prospective blocks and preparation of geological report.', 'Post mine allocation activities like mine plan preparation, applications and statutory clearances from different statutory authorities.', 'Assisting in land acquisition and R & R activities by maintaining longstanding relations with the local populace. We aim to bring about a win-win situation.', 'Complete mining operation covering drilling, blasting, excavation haulage and ancilliary activities with delivery of material at designated points.', 'With our strong fleet of HEMMS, we have well placed ourselves in carrying out mining operations for both the public and the private sector.'];
+            var miningCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: miningParagraphs });
+            var miningCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Mining', text: miningCollection }] });
+            var logisticParagraphs = ['Due to our long standing relation and infrastructure in different mining sector, we are capable to offer critical logistic support', 'Effective rail and tipper handling solution keeping focus on quality and quantity management.', 'Delivery of mineral from mine pit to the plant by  means of rails and roads.', 'Stockyard management in mines and railway siding.'];
+            var logisticCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: logisticParagraphs });
+            var logisticCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Logistics', text: logisticCollection }] });
+            var pkInfraParagraphs = ['We are engaged in aquaculture business designed to raise and produce fresh water prawn/shrimps', 'Some powerline projects are in pipeline'];
+            var pkInfraCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: pkInfraParagraphs });
+            var pkInfraCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'PK Infra', text: pkInfraCollection }] });
+            var softParagraphs = ['Recently we have diversified to software application. We are empanelled vendor of IDCOL Software Ltd. a govt. of Odisha PSU who is the nodal agency of Government of Odisha to provide software solution to different Government Agencies. ', 'We are partner of Bob and Procure, Bangalore a leading software solution provider who are pioneer in providing  e-procurement solution.', 'Partnered with Sakura geoinformation Software research private limited who are a leading software solution provider by using UAV/Drone. Some projects for application of drone technology are in pipeline.'];
+            var softCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: softParagraphs });
+            var softCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Software Solutions', text: softCollection }] });
+            var businessCollection = _react2.default.createElement(_CollectionComponent2.default, { collections: [miningCollapsible, logisticCollapsible, pkInfraCollapsible, softCollapsible] });
             return _react2.default.createElement(
                 'div',
                 null,
                 _react2.default.createElement(_Navbar2.default, null),
-                collapsibles
+                _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Our Business', text: businessCollection }] })
             );
         }
     }]);
 
-    return ServicesComponent;
+    return OurBusinessComponent;
 }(_react.Component);
 
-_reactDom2.default.render(_react2.default.createElement(ServicesComponent, null), document.getElementById('main'));
+_reactDom2.default.render(_react2.default.createElement(OurBusinessComponent, null), document.getElementById('main'));
 
 },{"./components/CollapsibleComponent":1,"./components/CollectionComponent":2,"./components/Navbar":3,"react":229,"react-dom":34}]},{},[230]);
