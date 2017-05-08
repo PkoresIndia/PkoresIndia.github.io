@@ -37,13 +37,13 @@ var CollapsibleComponent = function (_Component) {
             var collapsibles = collapsibleComponents.map(function (collapsibleComponent) {
                 return _react2.default.createElement(
                     _reactMaterialize.CollapsibleItem,
-                    { className: 'white-text blue darken-4', expanded: true, header: collapsibleComponent.header, icon: 'whatshot' },
+                    { className: 'black-text white', expanded: true, header: collapsibleComponent.header, icon: 'whatshot' },
                     collapsibleComponent.text
                 );
             });
             return _react2.default.createElement(
                 _reactMaterialize.Collapsible,
-                { className: 'blue darken-4 white-text' },
+                { className: 'white black-text' },
                 collapsibles
             );
         }
@@ -22124,7 +22124,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!name' },
           _react2.default.createElement(
             'span',
-            { className: 'white-text name' },
+            { className: 'black-text name' },
             name
           )
         ),
@@ -22133,7 +22133,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!email' },
           _react2.default.createElement(
             'span',
-            { className: 'white-text email' },
+            { className: 'black-text email' },
             email
           )
         )
@@ -25265,7 +25265,7 @@ var PartnersComponent = function (_Component) {
                 'no one in India. We have tied of with them to encase the opportunity of best technology used for mining to have better production.'
             );
             var partnersArray = ['We are associated with lot of companies in form of exploration and technology used for mining.', partnersHtml];
-            var partnersCollectionComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: partnersArray });
+            var partnersCollectionComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: partnersArray });
             var collapsibleObject = [{ header: 'Our Partners', text: partnersCollectionComponent }];
             return _react2.default.createElement(
                 'div',

@@ -43,10 +43,10 @@ var ClientComponent = function (_Component) {
     _createClass(ClientComponent, [{
         key: 'render',
         value: function render() {
-            var clientListComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: ['Sps group of companies', 'Nova ispat', 'Api ispat', 'Monet ispat', 'Nobel group of companies', 'Welspun steel and power', 'Milan developers', 'Nkb Industries.'] });
+            var clientListComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: ['Sps group of companies', 'Nova ispat', 'Api ispat', 'Monet ispat', 'Nobel group of companies', 'Welspun steel and power', 'Milan developers', 'Nkb Industries.'] });
             var clientListCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Following is a partial list of our client Lists', text: clientListComponent }] });
             var clientArray = ['Our Clients includes large and small companies both in manufacturing and service sector, providing clients the best value for money has made PK Ores Pvt. Ltd, one of the fastest growing and most respected firms in orissa as well as in Indian mining industry.', clientListCollapsible];
-            var clientCollectionComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: clientArray });
+            var clientCollectionComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: clientArray });
             return _react2.default.createElement(
                 'div',
                 null,
@@ -100,13 +100,13 @@ var CollapsibleComponent = function (_Component) {
             var collapsibles = collapsibleComponents.map(function (collapsibleComponent) {
                 return _react2.default.createElement(
                     _reactMaterialize.CollapsibleItem,
-                    { className: 'white-text blue darken-4', expanded: true, header: collapsibleComponent.header, icon: 'whatshot' },
+                    { className: 'black-text white', expanded: true, header: collapsibleComponent.header, icon: 'whatshot' },
                     collapsibleComponent.text
                 );
             });
             return _react2.default.createElement(
                 _reactMaterialize.Collapsible,
-                { className: 'blue darken-4 white-text' },
+                { className: 'white black-text' },
                 collapsibles
             );
         }
@@ -22187,7 +22187,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!name' },
           _react2.default.createElement(
             'span',
-            { className: 'white-text name' },
+            { className: 'black-text name' },
             name
           )
         ),
@@ -22196,7 +22196,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!email' },
           _react2.default.createElement(
             'span',
-            { className: 'white-text email' },
+            { className: 'black-text email' },
             email
           )
         )

@@ -128,13 +128,13 @@ var CollapsibleComponent = function (_Component) {
             var collapsibles = collapsibleComponents.map(function (collapsibleComponent) {
                 return _react2.default.createElement(
                     _reactMaterialize.CollapsibleItem,
-                    { className: 'white-text blue darken-4', expanded: true, header: collapsibleComponent.header, icon: 'whatshot' },
+                    { className: 'black-text white', expanded: true, header: collapsibleComponent.header, icon: 'whatshot' },
                     collapsibleComponent.text
                 );
             });
             return _react2.default.createElement(
                 _reactMaterialize.Collapsible,
-                { className: 'blue darken-4 white-text' },
+                { className: 'white black-text' },
                 collapsibles
             );
         }
@@ -316,13 +316,13 @@ var IndexComponent = function (_Component) {
             var _ref;
 
             var missionText = 'Our mission  is to have significant presence in all the activities related to mining industry, to be one of the leading players in its chosen field of operation, to give top priority to the satisfaction / delight of all stakeholders involved with the company and above all to ensure that none of its activities bring any damage to the environment is given top priority';
-            var visionComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: ['To be the leading mining company in terms of production and dispatches.', 'To strive and bring as much value addition to the minerals produced as possible.', 'To expand the activities beyond India and be a world player.'] });
+            var visionComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: ['To be the leading mining company in terms of production and dispatches.', 'To strive and bring as much value addition to the minerals produced as possible.', 'To expand the activities beyond India and be a world player.'] });
             var collapsibles = [{ header: 'Our Mission', text: missionText }, { header: 'Our Vision', text: visionComp }];
             var carouselTitle = "PK Ores Pvt. Ltd";
             var carouselText = "Is one of the leading players in the mining industry in the mineral rich states of Orissa and Jharkhand in India. The company, established in the year 2000 by young and technically qualified entrepreneurs, in a short span of time, achieved premier status in the entire gamut of activities associated with mining from exploration, mines development, ore production, beneficiation, logistics and to stevedoring. The major minerals handled by P.K. Ores are Iron Ores, Manganese Ores, Bauxite, Chrome and Granite";
             var carousels = [{ src: 'img/img1.jpg', text: carouselText, title: carouselTitle }, (_ref = { src: 'img/img2.jpg', text: 'image 2' }, _defineProperty(_ref, 'text', carouselText), _defineProperty(_ref, 'title', carouselTitle), _ref)];
             var newsObjs = ['We have already Started Our Overseas Expansion in West Africa', 'We are starting steward oring soon.'];
-            var newsComponent = _react2.default.createElement(_CollectionComponent2.default, { header: 'Company News', className: 'blue darken-4 white-text', collections: newsObjs });
+            var newsComponent = _react2.default.createElement(_CollectionComponent2.default, { header: 'Company News', className: 'white black-text', collections: newsObjs });
             return _react2.default.createElement(
                 'div',
                 null,
@@ -22294,7 +22294,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!name' },
           _react2.default.createElement(
             'span',
-            { className: 'white-text name' },
+            { className: 'black-text name' },
             name
           )
         ),
@@ -22303,7 +22303,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!email' },
           _react2.default.createElement(
             'span',
-            { className: 'white-text email' },
+            { className: 'black-text email' },
             email
           )
         )

@@ -6,8 +6,8 @@ export default class CollapsibleComponent extends Component {
     }
     render() {
       const collapsibleComponents = this.props.collapsibles
-      const collapsibles = collapsibleComponents.map((collapsibleComponent)=>(<CollapsibleItem className="white-text blue darken-4" expanded={true} header={collapsibleComponent.header} icon='whatshot'>{collapsibleComponent.text}</CollapsibleItem>))
-      return (<Collapsible className="blue darken-4 white-text">
+      const collapsibles = collapsibleComponents.map((collapsibleComponent)=>(<CollapsibleItem className="black-text white" expanded={true} header={collapsibleComponent.header} icon='whatshot'>{collapsibleComponent.text}</CollapsibleItem>))
+      return (<Collapsible className="white black-text">
                 {collapsibles}
             </Collapsible>)
     }

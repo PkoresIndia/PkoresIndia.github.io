@@ -37,13 +37,13 @@ var CollapsibleComponent = function (_Component) {
             var collapsibles = collapsibleComponents.map(function (collapsibleComponent) {
                 return _react2.default.createElement(
                     _reactMaterialize.CollapsibleItem,
-                    { className: 'white-text blue darken-4', expanded: true, header: collapsibleComponent.header, icon: 'whatshot' },
+                    { className: 'black-text white', expanded: true, header: collapsibleComponent.header, icon: 'whatshot' },
                     collapsibleComponent.text
                 );
             });
             return _react2.default.createElement(
                 _reactMaterialize.Collapsible,
-                { className: 'blue darken-4 white-text' },
+                { className: 'white black-text' },
                 collapsibles
             );
         }
@@ -215,11 +215,11 @@ var ContactUSComponent = function (_Component) {
         key: 'render',
         value: function render() {
             var regOfficeArray = ['A/154,1st Floor, Sahid Nagar Bhubaneswar-751007 Orissa, India', 'Ph: +91-674-2540557', 'Fax: +91-674-2545007', 'Email: info@pkoresindia.com,career@pkoresindia.com '];
-            var regOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: regOfficeArray });
+            var regOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: regOfficeArray });
             var worksOfficeArray = ['1 st Floor,Thakkar Complex Back side of Union Bank Station Road,Barbil,keonjhar', 'Orissa-758035'];
-            var workOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: worksOfficeArray });
+            var workOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: worksOfficeArray });
             var corpOfficeArray = ['Mohanesh Building, 1st floor,Parsikhill.sec-27, CVT Belapur.', 'Navi Mumbai.India', 'Ph:+91-22-27520550'];
-            var corpOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'blue darken-4', collections: corpOfficeArray });
+            var corpOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: corpOfficeArray });
             var collapsibleObj = [{ header: 'Reg. Office', text: regOfficeComp }, { header: 'Works Office', text: workOfficeComp }, { header: 'Corp Office', text: corpOfficeArray }];
             var collapsibles = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: collapsibleObj });
             return _react2.default.createElement(
@@ -22191,7 +22191,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!name' },
           _react2.default.createElement(
             'span',
-            { className: 'white-text name' },
+            { className: 'black-text name' },
             name
           )
         ),
@@ -22200,7 +22200,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!email' },
           _react2.default.createElement(
             'span',
-            { className: 'white-text email' },
+            { className: 'black-text email' },
             email
           )
         )
