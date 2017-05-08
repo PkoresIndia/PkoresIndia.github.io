@@ -22187,7 +22187,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!name' },
           _react2.default.createElement(
             'span',
-            { className: 'black-text name' },
+            { className: 'white-text name' },
             name
           )
         ),
@@ -22196,7 +22196,7 @@ var UserView = exports.UserView = function (_Component) {
           { href: '#!email' },
           _react2.default.createElement(
             'span',
-            { className: 'black-text email' },
+            { className: 'white-text email' },
             email
           )
         )
