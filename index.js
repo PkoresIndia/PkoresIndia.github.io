@@ -15,15 +15,21 @@ class IndexComponent extends Component {
         const visionComp = (<CollectionComponent className='white' collections={['To be the leading mining company in terms of production and dispatches.','To strive and bring as much value addition to the minerals produced as possible.','To expand the activities beyond India and be a world player.']}/>)
         const collapsibles = [{header:'Our Mission',text:missionText},{header:'Our Vision',text:visionComp}]
         const carouselTitle = "PK Ores Pvt. Ltd"
-        const carouselText = "Is one of the leading players in the mining industry in the mineral rich states of Orissa and Jharkhand in India. The company, established in the year 2000 by young and technically qualified entrepreneurs, in a short span of time, achieved premier status in the entire gamut of activities associated with mining from exploration, mines development, ore production, beneficiation, logistics and to stevedoring. The major minerals handled by P.K. Ores are Iron Ores, Manganese Ores, Bauxite, Chrome and Granite"
-        const carousels = [{src:'img/img1.jpg',text:carouselText,title:carouselTitle},{src:'img/img2.jpg',text:'image 2',text:carouselText,title:carouselTitle}]
+        const carouselSubtitle = "Mining ahead of times..."
+        // const carouselText = "Is one of the leading players in the mining industry in the mineral rich states of Orissa and Jharkhand in India. The company, established in the year 2000 by young and technically qualified entrepreneurs, in a short span of time, achieved premier status in the entire gamut of activities associated with mining from exploration, mines development, ore production, beneficiation, logistics and to stevedoring. The major minerals handled by P.K. Ores are Iron Ores, Manganese Ores, Bauxite, Chrome and Granite"
+        const companyOverviewArray = ['P.K. ores Pvt. Ltd., a leading player in the mining sector in the minreal rich states of Odisha and Jharkhand. The group was established in the year 2000 by young entrepreneurs with technical background.','The company specializes in mining, handling, transportation and export of materials like Iron ore, Manganese, Limestomne and other minerals.','Since its inception the comoany went to strength to strength and it was inevitable to diversify its activities to infrastructure and software.']
+        const companyOverviewCollection = <CollectionComponent collections={companyOverviewArray}/>
+        const companyOverviewCollapsible = <CollapsibleComponent className='white black-text' collapsibles={[{header:'Company Overview',text:companyOverviewCollection}]}/>
+        const carousels = [{src:'img/img1.jpg',text:carouselSubtitle,title:carouselTitle},{src:'img/img2.jpg',text:'image 2',text:carouselSubtitle,title:carouselTitle}]
         const newsObjs = ['We have already Started Our Overseas Expansion in West Africa','We are starting steward oring soon.']
-        const newsComponent = <CollectionComponent header="Company News" className='white black-text' collections={newsObjs}/>
+        const newsComponent = <CollectionComponent className='white black-text' collections={newsObjs}/>
+        const newsCollapsible = <CollapsibleComponent collapsibles = {[{header:'Company News',text:newsComponent}]}/>
         return (<div>
                 <NavBar/>
                 <Carousel carousels={carousels}/>
+                {companyOverviewCollapsible}
                 <CollapsibleComponent collapsibles={collapsibles}/>
-                {newsComponent}
+                {newsCollapsible}
             </div>)
     }
 }
