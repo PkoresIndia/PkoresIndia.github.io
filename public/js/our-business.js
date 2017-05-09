@@ -149,6 +149,7 @@ var NavBar = function (_Component) {
     _createClass(NavBar, [{
         key: 'render',
         value: function render() {
+            var logo = _react2.default.createElement('img', { src: 'img/pkores.jpeg' });
             var navComponents = this.state.navs.map(function (nav) {
                 return _react2.default.createElement(
                     _reactMaterialize.NavItem,
@@ -158,7 +159,7 @@ var NavBar = function (_Component) {
             });
             return _react2.default.createElement(
                 _reactMaterialize.Navbar,
-                null,
+                { brand: logo },
                 navComponents
             );
         }
@@ -25253,13 +25254,20 @@ var OurBusinessComponent = function (_Component) {
             var logisticParagraphs = ['Due to our long standing relation and infrastructure in different mining sector, we are capable to offer critical logistic support', 'Effective rail and tipper handling solution keeping focus on quality and quantity management.', 'Delivery of mineral from mine pit to the plant by  means of rails and roads.', 'Stockyard management in mines and railway siding.'];
             var logisticCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: logisticParagraphs });
             var logisticCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Logistics', text: logisticCollection }] });
-            var pkInfraParagraphs = ['We are engaged in aquaculture business designed to raise and produce fresh water prawn/shrimps', 'Some powerline projects are in pipeline'];
+            var pkInfraParagraphs = ['We undertake erection, installation and commissioning of EHT(Extra High Tension) powerlines.'];
+            //const pkInfraParagraphs = ['We are engaged in aquaculture business designed to raise and produce fresh water prawn/shrimps','Some powerline projects are in pipeline']
             var pkInfraCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: pkInfraParagraphs });
             var pkInfraCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'PK Infra and Power Co. Pvt. limited', text: pkInfraCollection }] });
+            var pkParagraphs = ['We are engaged in aquaculture business designed to raise and produce fresh water prawn/shrimps in 100 acres at Balasore.'];
+            //const pkInfraParagraphs = ['We are engaged in aquaculture business designed to raise and produce fresh water prawn/shrimps','Some powerline projects are in pipeline']
+            var pkCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: pkParagraphs });
+            var pkCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Thriveni and Peekay Mining Co. pvt. ltd.', text: pkCollection }] });
+
             var softParagraphs = ['Recently we have diversified to software application. We are empanelled vendor of IDCOL Software Ltd. a govt. of Odisha PSU who is the nodal agency of Government of Odisha to provide software solution to different Government Agencies. ', 'We are partner of Bob and Procure, Bangalore a leading software solution provider who are pioneer in providing  e-procurement solution.', 'Partnered with Sakura geoinformation Software research private limited who are a leading software solution provider by using UAV/Drone. Some projects for application of drone technology are in pipeline.'];
             var softCollection = _react2.default.createElement(_CollectionComponent2.default, { className: 'white black-text', collections: softParagraphs });
             var softCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Software Solutions', text: softCollection }] });
-            var businessCollection = _react2.default.createElement(_CollectionComponent2.default, { collections: [miningCollapsible, logisticCollapsible, pkInfraCollapsible, softCollapsible] });
+
+            var businessCollection = _react2.default.createElement(_CollectionComponent2.default, { collections: [miningCollapsible, logisticCollapsible, pkInfraCollapsible, pkCollapsible, softCollapsible] });
             return _react2.default.createElement(
                 'div',
                 null,

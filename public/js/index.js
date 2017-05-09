@@ -39,7 +39,7 @@ var Carousel = function (_Component) {
             var _this2 = this;
 
             this.state.carousels.forEach(function (carousel, index) {
-                _this2.colorifyImage(carousel, '#00BCD4', _this2.state.carousels, index);
+                _this2.colorifyImage(carousel, '#FF6F00', _this2.state.carousels, index);
             });
         }
     }, {
@@ -315,6 +315,7 @@ var NavBar = function (_Component) {
     _createClass(NavBar, [{
         key: 'render',
         value: function render() {
+            var logo = _react2.default.createElement('img', { src: 'img/pkores.jpeg' });
             var navComponents = this.state.navs.map(function (nav) {
                 return _react2.default.createElement(
                     _reactMaterialize.NavItem,
@@ -324,7 +325,7 @@ var NavBar = function (_Component) {
             });
             return _react2.default.createElement(
                 _reactMaterialize.Navbar,
-                null,
+                { brand: logo },
                 navComponents
             );
         }

@@ -149,6 +149,7 @@ var NavBar = function (_Component) {
     _createClass(NavBar, [{
         key: 'render',
         value: function render() {
+            var logo = _react2.default.createElement('img', { src: 'img/pkores.jpeg' });
             var navComponents = this.state.navs.map(function (nav) {
                 return _react2.default.createElement(
                     _reactMaterialize.NavItem,
@@ -158,7 +159,7 @@ var NavBar = function (_Component) {
             });
             return _react2.default.createElement(
                 _reactMaterialize.Navbar,
-                null,
+                { brand: logo },
                 navComponents
             );
         }
