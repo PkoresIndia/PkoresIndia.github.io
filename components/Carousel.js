@@ -7,7 +7,7 @@ export default class Carousel extends Component {
     }
     componentDidMount() {
         this.state.carousels.forEach((carousel,index)=>{
-            this.colorifyImage(carousel,'#00BCD4',this.state.carousels,index)
+            this.colorifyImage(carousel,'#FF6F00',this.state.carousels,index)
         })
     }
     colorifyImage(carousel,color,carousels,index) {
