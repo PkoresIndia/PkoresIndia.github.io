@@ -43,7 +43,7 @@ var ClientComponent = function (_Component) {
     _createClass(ClientComponent, [{
         key: 'render',
         value: function render() {
-            var clientListComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: ['Sps group of companies', 'Nova ispat', 'Api ispat', 'Monet ispat', 'Nobel group of companies', 'Welspun steel and power', 'Milan developers', 'Nkb Industries.'] });
+            var clientListComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: ['ODISHA MINING CORPORATION LIMITED', 'INDUSTRIAL CORPORATION OF ODISHA LIMITED', 'MAHARASHTRA MINING CORPORATION', 'KJS AHLUWALIA LIMITED', 'DR. SAROJINI PRADHAN', 'PK AHLUWALIA', 'PK ENTERPRISES'] });
             var clientListCollapsible = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: 'Following is a partial list of our client Lists', text: clientListComponent }] });
             var clientArray = ['Our Clients includes large and small companies both in manufacturing and service sector, providing clients the best value for money has made PK Ores Pvt. Ltd, one of the fastest growing and most respected firms in orissa as well as in Indian mining industry.', clientListCollapsible];
             var clientCollectionComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: clientArray });
