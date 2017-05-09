@@ -16,7 +16,7 @@ class OurBusinessComponent extends Component {
         const logisticCollapsible = <CollapsibleComponent collapsibles={[{header:'Logistics',text:logisticCollection}]}/>
         const pkInfraParagraphs = ['We are engaged in aquaculture business designed to raise and produce fresh water prawn/shrimps','Some powerline projects are in pipeline']
         const pkInfraCollection  = <CollectionComponent className="white black-text" collections={pkInfraParagraphs}/>
-        const pkInfraCollapsible = <CollapsibleComponent collapsibles={[{header:'PK Infra',text:pkInfraCollection}]}/>
+        const pkInfraCollapsible = <CollapsibleComponent collapsibles={[{header:'PK Infra and Power Co. Pvt. limited',text:pkInfraCollection}]}/>
         const softParagraphs = ['Recently we have diversified to software application. We are empanelled vendor of IDCOL Software Ltd. a govt. of Odisha PSU who is the nodal agency of Government of Odisha to provide software solution to different Government Agencies. ','We are partner of Bob and Procure, Bangalore a leading software solution provider who are pioneer in providing  e-procurement solution.','Partnered with Sakura geoinformation Software research private limited who are a leading software solution provider by using UAV/Drone. Some projects for application of drone technology are in pipeline.']
         const softCollection  = <CollectionComponent className="white black-text" collections={softParagraphs}/>
         const softCollapsible = <CollapsibleComponent collapsibles={[{header:'Software Solutions',text:softCollection}]}/>
