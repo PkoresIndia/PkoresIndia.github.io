@@ -6,6 +6,7 @@ import {Collapsible,CollapsibleItem,Collection,CollectionItem} from 'react-mater
 import CollapsibleComponent from './components/CollapsibleComponent'
 import CollectionComponent from './components/CollectionComponent'
 import MultiCollapsibles from './components/MultiCollapsibles'
+import ProcessComponent from './components/ProcessComponent'
 class IndexComponent extends Component {
     constructor(props) {
         super(props)
@@ -30,12 +31,15 @@ class IndexComponent extends Component {
         const miningProcessingArray = ['Marketing','Logistics','Exports']
         const businessModelObject = {title:'Business Model',collapsibles:[{title:'Mining Development',items:mininingDevelopmentArray},{title:'Mining Contracting',items:miningCostArray},{title:'Mining Processing',items:miningProcessingArray}]}
         const businessModelComponent = <MultiCollapsibles item={businessModelObject}/>
+        const processComponent = <ProcessComponent processes={['Geographical Prospecting','Mine Planning','Statutory Clearance','Mine Operation','Ore Preparation','Socio-Economic Development','Marketing of Ore']}/>
+        const processCollapsible = <CollapsibleComponent collapsibles={[{header:'Trunkey Mining process',text:processComponent}]}/>
         return (<div>
                 <NavBar/>
                 <Carousel carousels={carousels}/>
                 {companyOverviewCollapsible}
                 <CollapsibleComponent collapsibles={collapsibles}/>
                 {businessModelComponent}
+                {processComponent}
             </div>)
     }
 }
