@@ -14,7 +14,7 @@ export default class MultiCollapsibles extends Component {
         const collapsibleComponents = collapsibles.map((collapsible)=>{
             const title = collapsible.title
             const component = <CollectionComponent collections={collapsible.items}/>
-            return <Col s={12} l={6} m={gridSize}><CollapsibleComponent collapsibles={[{header:title,text:component}]}/></Col>
+            return <Col s={12} l={gridSize} m={gridSize}><CollapsibleComponent collapsibles={[{header:title,text:component}]}/></Col>
         })
         const collapsibleSubComponent = <Row>{collapsibleComponents}</Row>
 

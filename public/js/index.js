@@ -254,7 +254,7 @@ var MultiCollapsibles = function (_Component) {
                 var component = _react2.default.createElement(_CollectionComponent2.default, { collections: collapsible.items });
                 return _react2.default.createElement(
                     _reactMaterialize.Col,
-                    { s: 12, l: 6, m: gridSize },
+                    { s: 12, l: gridSize, m: gridSize },
                     _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: [{ header: title, text: component }] })
                 );
             });
