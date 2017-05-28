@@ -370,8 +370,8 @@ var ProcessComponent = function (_Component) {
     }
 
     _createClass(ProcessComponent, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
+        key: 'drawImage',
+        value: function drawImage() {
             var processes = this.props.processes;
             var canvas = document.createElement('canvas');
             var context = canvas.getContext('2d');
@@ -383,6 +383,8 @@ var ProcessComponent = function (_Component) {
             canvas.height = 18 * size;
             var cx = 9 * size,
                 cy = 9 * size;
+            context.fillStyle = '#FFB300';
+            context.fillRect(0, 0, canvas.width, canvas.height);
             context.fillStyle = '#283593';
             context.strokeStyle = context.fillStyle;
             context.lineWidth = size / 2;
@@ -435,6 +437,16 @@ var ProcessComponent = function (_Component) {
                 }
             });
             this.setState({ src: canvas.toDataURL() });
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            this.drawImage();
+            window.onresize = function () {
+                _this2.drawImage();
+            };
         }
     }, {
         key: 'render',
