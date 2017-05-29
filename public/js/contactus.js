@@ -219,9 +219,10 @@ var ContactUSComponent = function (_Component) {
             var regOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: regOfficeArray });
             var worksOfficeArray = ['1 st Floor,Thakkar Complex Back side of Union Bank Station Road,Barbil,keonjhar', 'Orissa-758035'];
             var workOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: worksOfficeArray });
-            var corpOfficeArray = ['Mohanesh Building, 1st floor,Parsikhill.sec-27, CVT Belapur.', 'Navi Mumbai.India', 'Ph:+91-22-27520550'];
+            //A-21,1st floor,Amrit Nagar,South Extension-1,New Delhi-110049
+            var corpOfficeArray = ['A-21, 1st floor,Amrit Nagar,South Extension-1', 'New Delhi-110049'];
             var corpOfficeComp = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: corpOfficeArray });
-            var collapsibleObj = [{ header: 'Reg. Office', text: regOfficeComp }, { header: 'Works Office', text: workOfficeComp }, { header: 'Corp Office', text: corpOfficeArray }];
+            var collapsibleObj = [{ header: 'Reg. Office', text: regOfficeComp }, { header: 'Works Office', text: workOfficeComp }, { header: 'Corp Office', text: corpOfficeComp }];
             var collapsibles = _react2.default.createElement(_CollapsibleComponent2.default, { collapsibles: collapsibleObj });
             return _react2.default.createElement(
                 'div',

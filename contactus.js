@@ -12,9 +12,10 @@ class ContactUSComponent extends Component {
         const regOfficeComp = <CollectionComponent className='white' collections={regOfficeArray}/>
         const worksOfficeArray = ['1 st Floor,Thakkar Complex Back side of Union Bank Station Road,Barbil,keonjhar','Orissa-758035']
         const workOfficeComp = <CollectionComponent className='white' collections={worksOfficeArray}/>
-        const corpOfficeArray = ['Mohanesh Building, 1st floor,Parsikhill.sec-27, CVT Belapur.','Navi Mumbai.India','Ph:+91-22-27520550']
+        //A-21,1st floor,Amrit Nagar,South Extension-1,New Delhi-110049
+        const corpOfficeArray = ['A-21, 1st floor,Amrit Nagar,South Extension-1','New Delhi-110049']
         const corpOfficeComp = <CollectionComponent className='white' collections={corpOfficeArray}/>
-        const collapsibleObj = [{header:'Reg. Office',text:regOfficeComp},{header:'Works Office',text:workOfficeComp},{header:'Corp Office',text:corpOfficeArray}]
+        const collapsibleObj = [{header:'Reg. Office',text:regOfficeComp},{header:'Works Office',text:workOfficeComp},{header:'Corp Office',text:corpOfficeComp}]
         const collapsibles = <CollapsibleComponent collapsibles={collapsibleObj}/>
         return <div>
                   <NavBar/>
