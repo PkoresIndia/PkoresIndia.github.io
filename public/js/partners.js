@@ -25242,32 +25242,40 @@ var PartnersComponent = function (_Component) {
     function PartnersComponent(props) {
         _classCallCheck(this, PartnersComponent);
 
-        return _possibleConstructorReturn(this, (PartnersComponent.__proto__ || Object.getPrototypeOf(PartnersComponent)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (PartnersComponent.__proto__ || Object.getPrototypeOf(PartnersComponent)).call(this, props));
+
+        _this.state = { src: 'img/partners.jpg', w: 0 };
+        return _this;
     }
 
     _createClass(PartnersComponent, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            var image = new Image();
+            image.src = this.state.src;
+            image.onload = function () {
+                var w = image.width,
+                    h = image.height;
+                var canvas = document.createElement('canvas');
+                canvas.width = w;
+                canvas.height = h;
+                var context = canvas.getContext('2d');
+                context.beginPath();
+                context.rect(0, h / 9 + h / 30, w, 8 * h / 10 - h / 20 - h / 30);
+                context.clip();
+                context.drawImage(image, 0, 0);
+                _this2.setState({ src: canvas.toDataURL(), w: w });
+            };
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var partnersHtml = _react2.default.createElement(
-                'p',
-                null,
-                'For exploration of minerals, PK Ores Pvt. Ltd has tied up with the most leading organization like ',
-                _react2.default.createElement(
-                    'a',
-                    { href: 'http://www.geomin.com' },
-                    'Geomin Group'
-                ),
-                '. With this venture we are exploring the mineral resources in the whole world. For the best technology used for mining, who else is better then ',
-                _react2.default.createElement(
-                    'a',
-                    { href: 'http://thriveni.com/' },
-                    'Thriveni earth movers (p) ltd. '
-                ),
-                'no one in India. We have tied of with them to encase the opportunity of best technology used for mining to have better production.'
-            );
-            var partnersArray = ['We are associated with lot of companies in form of exploration and technology used for mining.', partnersHtml];
-            var partnersCollectionComponent = _react2.default.createElement(_CollectionComponent2.default, { className: 'white', collections: partnersArray });
-            var collapsibleObject = [{ header: 'Our Partners', text: partnersCollectionComponent }];
+            var partnersHtml = _react2.default.createElement('img', { src: this.state.src, style: { transform: 'translateX(' + (window.innerWidth / 2 - this.state.w / 2) + ')' } });
+            // const partnersArray = ['We are associated with lot of companies in form of exploration and technology used for mining.',partnersHtml]
+            // const partnersCollectionComponent = <CollectionComponent className="white" collections={partnersArray}/>
+            var collapsibleObject = [{ header: 'Working with', text: partnersHtml }];
             return _react2.default.createElement(
                 'div',
                 null,
